@@ -212,21 +212,20 @@ public class GameManager : MonoBehaviour
             if (sum == 100)
             {
                 gameButton.SetActive(true);
+                parcentagesOverFlow.SetActive(false);
+
 
             }
             else if (sum > 100) 
             {
                 parcentagesOverFlow.SetActive(true);
-                for (int j = 0; j < sliders.Length; j++) 
-                {
-                    sliders[j].GetComponent<Slider>().interactable = false;
-                
-                }
+                gameButton.SetActive(false);
+             
             }
             else
             {
                 gameButton.SetActive(false);
-               // parcentagesOverFlow.SetActive(false);
+                parcentagesOverFlow.SetActive(false);
 
             }
 
@@ -236,6 +235,11 @@ public class GameManager : MonoBehaviour
       
 
     }
+
+    public void ActivateSliderInteraction() 
+    {
+    
+     }
     #endregion
 
 
