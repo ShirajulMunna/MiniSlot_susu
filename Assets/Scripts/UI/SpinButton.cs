@@ -16,10 +16,16 @@ namespace JGM.Game.UI
         public RectTransform startGameTxt;
 
         private Button _spinButton;
+        public GameObject spark;
+        public GameObject spark_2;
+        public AudioClip gameStart;
+        private AudioSource _audioSource;
+
 
         private void Awake()
         {
             _spinButton = GetComponent<Button>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         public void TriggerStartSpinEvent() 
@@ -31,11 +37,34 @@ namespace JGM.Game.UI
         private IEnumerator SendStartSpinEventAfterAudioFinishedPlaying()
         {
             yield return new WaitWhile(() => _audioService.IsPlaying("Press Button"));
-            startGameTxt.DOLocalMoveY(-8.00f, 0.1f).SetEase(Ease.InBounce);           
-            yield return new WaitForSeconds(1f);
-            startGameTxt.DOLocalMoveY(530f, 0.1f).SetEase(Ease.InBounce);
-            yield return new WaitForSeconds(0.9f);
-            _eventTriggerService.Trigger("Start Spin");
+            startGameTxt.DOLocalMoveX(4.00f, 0.1f).SetEase(Ease.InElastic).OnComplete(() => {
+                spark.SetActive(true);
+                spark_2.SetActive(true);
+                _audioSource.PlayOneShot(gameStart);
+
+                startGameTxt.DOShakePosition(duration: 1f, strength: 10f, vibrato: 10).OnComplete(() => {
+
+                _eventTriggerService.Trigger("Start Spin");
+
+                    Invoke("AfterStartAnim", 0.2f);
+
+                });
+              
+
+
+
+            });
+         
+        }
+
+        public void AfterStartAnim() 
+        {
+            startGameTxt.DOLocalMoveX(530f, 0.1f).SetEase(Ease.InBounce);
+            spark.SetActive(false);
+            spark_2.SetActive(false);
+
+
+
         }
 
         public void SetButtonInteraction(bool makeInteractable)

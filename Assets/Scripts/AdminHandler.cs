@@ -22,6 +22,15 @@ public class AdminHandler : MonoBehaviour
         UpdateGiftSlider();
         UpdateParticlesSlider();
 
+        GameManager.Instance.sliderValue[0] = PlayerPrefs.GetFloat("NoMatch", 99);
+        GameManager.Instance.sliderValue[1] = PlayerPrefs.GetFloat("Watch", 0);
+        GameManager.Instance.sliderValue[2] = PlayerPrefs.GetFloat("Camera",0);
+        GameManager.Instance.sliderValue[3] = PlayerPrefs.GetFloat("Laptop", 0);
+        GameManager.Instance.sliderValue[4] = PlayerPrefs.GetFloat("Bag", 0);
+        GameManager.Instance.sliderValue[5] = PlayerPrefs.GetFloat("Mobile", 0);
+
+
+
         //End Admin
 
     }

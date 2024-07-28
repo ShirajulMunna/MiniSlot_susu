@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject text_RollingTimeSlider;
     public GameObject text_RollingItemSlider;
 
-    public float[] sliderValue = { 50,50,50,50,50,0};
+    public float[] sliderValue = { 0,50,50,50,50,50};
     public float rollingTime;
     public float rollingSpeed;
     public float rollingItem;
@@ -217,11 +217,16 @@ public class GameManager : MonoBehaviour
             else if (sum > 100) 
             {
                 parcentagesOverFlow.SetActive(true);
+                for (int j = 0; j < sliders.Length; j++) 
+                {
+                    sliders[j].GetComponent<Slider>().interactable = false;
+                
+                }
             }
             else
             {
                 gameButton.SetActive(false);
-                parcentagesOverFlow.SetActive(false);
+               // parcentagesOverFlow.SetActive(false);
 
             }
 
@@ -513,9 +518,9 @@ public class GameManager : MonoBehaviour
             resetHandler();
         }
         RollerManager.Instance.ItemChange((int)value);
-        itemCount = (int)value;
+        itemCount = (int)value+2;
 
-        if (value >= 4)
+        if (value >= 2)
         {
             text_RollingItemSlider.SetActive(true);
 
