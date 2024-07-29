@@ -211,7 +211,7 @@ public class GameManager : MonoBehaviour
 
             if (sum == 100)
             {
-                gameButton.SetActive(true);
+              //  gameButton.SetActive(true);
                 parcentagesOverFlow.SetActive(false);
 
 
@@ -219,13 +219,13 @@ public class GameManager : MonoBehaviour
             else if (sum > 100) 
             {
                 parcentagesOverFlow.SetActive(true);
-                gameButton.SetActive(false);
+              //  gameButton.SetActive(false);
              
             }
             else
             {
-                gameButton.SetActive(false);
-                parcentagesOverFlow.SetActive(false);
+               // gameButton.SetActive(false);
+              // parcentagesOverFlow.SetActive(false);
 
             }
 
@@ -239,7 +239,7 @@ public class GameManager : MonoBehaviour
     public void ActivateSliderInteraction() 
     {
     
-     }
+    }
     #endregion
 
 
