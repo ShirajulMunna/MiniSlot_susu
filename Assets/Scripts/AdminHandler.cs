@@ -12,10 +12,12 @@ public class AdminHandler : MonoBehaviour
     void Start()
     {
         // Admin
-        rotationSpeed = PlayerPrefs.GetInt("rotationSpeed");
-        rotationTime = PlayerPrefs.GetInt("rotationTime");
-        gift = PlayerPrefs.GetInt("gift");
-        particles = PlayerPrefs.GetInt("particles");
+        rotationSpeed = PlayerPrefs.GetInt("rotationSpeed",1000);
+        Debug.Log("r speed" + rotationSpeed);
+
+        rotationTime = PlayerPrefs.GetInt("rotationTime",5);
+        gift = PlayerPrefs.GetInt("gift",3);
+        particles = PlayerPrefs.GetInt("particles",1);
         
         UpdateSpeedSlider();
         UpdateTimeSlider();
