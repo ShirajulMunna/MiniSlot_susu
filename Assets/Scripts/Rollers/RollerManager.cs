@@ -116,7 +116,7 @@ namespace JGM.Game.Rollers
 
             for (uint i = 0; i < _rollers.Length; ++i)
             {
-                _rollers[i].StartSpinCountdown(rand, noMatchRand);
+                _rollers[i].StartSpinCountdown(_rollers[i].name,rand, noMatchRand);
                 yield return new WaitWhile(() => _rollers[i].IsSpinning);
                 
                 _rollers[i].GetRollerItemsOnScreen(out List<int> itemsOnScreen);

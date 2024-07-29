@@ -85,10 +85,23 @@ namespace JGM.Game.Rollers
         }
       
        
-        public void StartSpinCountdown(float rand, int noMatchRand)
+        public void StartSpinCountdown(string rollerName,float rand, int noMatchRand)
         {
-            
-            float currentSpinTmeInSeconds = spinTime;
+
+            float currentSpinTmeInSeconds = 0.5f;
+
+            if (rollerName == "roller_1")
+            {
+                currentSpinTmeInSeconds = spinTime - 2;
+            }
+            else if (rollerName == "roller_2")
+            {
+                currentSpinTmeInSeconds = 1f;
+            }
+            else
+            {
+                currentSpinTmeInSeconds = 1f;
+            }
 
             StartCoroutine(StopSpinAfterDelay(currentSpinTmeInSeconds, rand, noMatchRand));
         }
