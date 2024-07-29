@@ -379,12 +379,12 @@ public class GameManager : MonoBehaviour
         //rollingSpeed = value*1000;
         if (value == 1)
         {
-            text_RollingSpeedSlider.SetActive(true);
+            //text_RollingSpeedSlider.SetActive(true);
             PlayerPrefs.SetInt("rotationSpeed", 1000);
         }
         else if (value == 2)
         {
-            text_RollingSpeedSlider.SetActive(false);
+            //text_RollingSpeedSlider.SetActive(false);
             PlayerPrefs.SetInt("rotationSpeed", 2000);
         }
         else 
@@ -393,7 +393,17 @@ public class GameManager : MonoBehaviour
 
         }
 
-       
+        if (value >= 2)
+        {
+            text_RollingSpeedSlider.SetActive(true);
+
+        }
+        else
+        {
+            text_RollingSpeedSlider.SetActive(false);
+        }
+
+
     }
 
     public void rollingTimeUpdateHandler(float value)
@@ -465,7 +475,9 @@ public class GameManager : MonoBehaviour
             slider4Fill.GetComponent<Image>().enabled = false;
             GameObject slider4Handle = sliders[5].transform.GetChild(4).gameObject.transform.GetChild(0).gameObject;
             slider4Handle.SetActive(false);
-            resetHandler();
+            //resetHandler();
+            sliders[4].value = 0;
+            sliders[5].value = 0;
 
 
 
@@ -493,7 +505,7 @@ public class GameManager : MonoBehaviour
             slider4Fill.GetComponent<Image>().enabled = false;
             GameObject slider4Handle = sliders[5].transform.GetChild(4).gameObject.transform.GetChild(0).gameObject;
             slider4Handle.SetActive(false);
-            resetHandler();
+            sliders[5].value = 0;
         }
         else if ( value == 3)
         {
@@ -518,8 +530,8 @@ public class GameManager : MonoBehaviour
             slider4Fill.GetComponent<Image>().enabled = true;
             GameObject slider4Handle = sliders[5].transform.GetChild(4).gameObject.transform.GetChild(0).gameObject;
             slider4Handle.SetActive(true);
-
-            resetHandler();
+            
+            //resetHandler();
         }
         RollerManager.Instance.ItemChange((int)value);
         itemCount = (int)value+2;

@@ -111,14 +111,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 8281258035856771529}
-  speedValue_1: 10
-  speedValue_2: 5
-  speedValue_3: 7
-  speedValue_4: 9
+  speedValue_1: 0.5
+  speedValue_2: 3.5
+  speedValue_3: 7.5
+  speedValue_4: 8
   speedValue_5: 3
-  speedValue_6: 6.5
-  speedValue_7: 8.5
-  speedValue_8: 10
+  speedValue_6: 8.3
+  speedValue_7: 10.5
+  speedValue_8: 12.5
   speedValue_9: 3
   speedValue_10: 5
   speedValue_11: 7
