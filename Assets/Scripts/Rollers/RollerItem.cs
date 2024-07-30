@@ -84,17 +84,17 @@ namespace JGM.Game.Rollers
                 if (_roller.name == "roller_1")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[0].GetComponent<Roller>().totalTime;
-                    div = 1;
+                    div = 0.8f;
                 }
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 2;
+                    div = 0.9f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 3;
+                    div = 0.85f;
                 }
 
 
@@ -102,7 +102,7 @@ namespace JGM.Game.Rollers
                 if (itemTime_1 > 0 && itemTime_1 <= 1f)
                 {
                     Debug.Log("Log_1");
-                    _moveSpeed *= speedValue_1;
+                    _moveSpeed += speedValue_1;
                     newSpeed_1 = _moveSpeed;
                     Debug.Log("slot 1 " + newSpeed_1);
 
@@ -111,7 +111,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_2");
 
-                    _moveSpeed *= speedValue_2;
+                    _moveSpeed += speedValue_2;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -120,7 +120,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_2");
 
-                    _moveSpeed *= speedValue_3;
+                    _moveSpeed += speedValue_3;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -138,7 +138,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_2");
 
-                    _moveSpeed -= speedValue_5;
+                    _moveSpeed += speedValue_5;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -147,7 +147,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_2");
 
-                    _moveSpeed -= speedValue_6;
+                    _moveSpeed += speedValue_6;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -156,7 +156,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_2");
 
-                    _moveSpeed -= speedValue_7;
+                    _moveSpeed += speedValue_7;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -165,7 +165,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_2");
 
-                    _moveSpeed -= speedValue_8;
+                    _moveSpeed += speedValue_8;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -183,17 +183,17 @@ namespace JGM.Game.Rollers
                 if (_roller.name == "roller_1")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[0].GetComponent<Roller>().totalTime;
-                    div = 1;
+                    div = 0.8f;
                 }
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 2;
+                    div = 0.9f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 3;
+                    div = 0.8f;
                 }
 
 
@@ -201,7 +201,7 @@ namespace JGM.Game.Rollers
                 if (itemTime_1 > 0 && itemTime_1 <= 1f)
                 {
                     Debug.Log("Log_1.7");
-                    _moveSpeed *= speedValue_9;
+                    _moveSpeed += speedValue_9;
                    
                     newSpeed_1 = _moveSpeed;
                     Debug.Log("slot 1 " + newSpeed_1);
@@ -210,7 +210,7 @@ namespace JGM.Game.Rollers
                 else if (itemTime_1 > 1f && itemTime_1 <= 1.75f)
                 {
                     Debug.Log("Log_2.7");
-                    _moveSpeed *= speedValue_10;
+                    _moveSpeed += speedValue_10;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -218,7 +218,7 @@ namespace JGM.Game.Rollers
                 else if (itemTime_1 > 1.75f && itemTime_1 <= 2.0f)
                 {
                     Debug.Log("Log_3.7");
-                    _moveSpeed *= speedValue_11;
+                    _moveSpeed += speedValue_11;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -227,7 +227,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_4.7");
 
-                    _moveSpeed *= speedValue_12;
+                    _moveSpeed += speedValue_12;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -236,7 +236,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_5.7");
 
-                    _moveSpeed *= speedValue_13;
+                    _moveSpeed += speedValue_13;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -245,7 +245,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_6.7");
 
-                    _moveSpeed *= speedValue_14;
+                    _moveSpeed += speedValue_14;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -254,7 +254,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_7.7");
 
-                    _moveSpeed -= speedValue_15;
+                    _moveSpeed += speedValue_15;
                     Debug.Log("Sp" + _moveSpeed);
                     newSpeed_1 = _moveSpeed;
 
@@ -264,7 +264,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_8.7");
 
-                    _moveSpeed -= speedValue_16;
+                    _moveSpeed += speedValue_16;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -272,7 +272,7 @@ namespace JGM.Game.Rollers
                 if (itemTime_1 > 5.00f && itemTime_1 <= 5.50f)
                 {
                     Debug.Log("Log_9.7");
-                    _moveSpeed -= speedValue_17;
+                    _moveSpeed += speedValue_17;
                     newSpeed_1 = _moveSpeed;
                    
 
@@ -281,7 +281,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_10.7");
 
-                    _moveSpeed -= speedValue_18;
+                    _moveSpeed += speedValue_18;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -290,7 +290,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_11.7");
 
-                    _moveSpeed -= speedValue_19;
+                    _moveSpeed += speedValue_19;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -299,7 +299,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_12.7");
 
-                    _moveSpeed -= speedValue_20;
+                    _moveSpeed += speedValue_20;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -316,17 +316,17 @@ namespace JGM.Game.Rollers
                 if (_roller.name == "roller_1")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[0].GetComponent<Roller>().totalTime;
-                    div = 1;
+                    div = 0.8f;
                 }
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 2;
+                    div = 0.9f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 3;
+                    div = 0.85f;
                 }
 
 
@@ -334,7 +334,7 @@ namespace JGM.Game.Rollers
                 if (itemTime_1 > 0 && itemTime_1 <= 1f)
                 {
                     Debug.Log("Log_1.7");
-                    _moveSpeed *= speedValue_21;
+                    _moveSpeed += speedValue_21;
                     newSpeed_1 = _moveSpeed;
                     Debug.Log("slot 1 " + newSpeed_1);
 
@@ -342,7 +342,7 @@ namespace JGM.Game.Rollers
                 else if (itemTime_1 > 1f && itemTime_1 <= 1.75f)
                 {
                     Debug.Log("Log_2.7");
-                    _moveSpeed *= speedValue_22;
+                    _moveSpeed += speedValue_22;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -350,7 +350,7 @@ namespace JGM.Game.Rollers
                 else if (itemTime_1 > 1.75f && itemTime_1 <= 2.0f)
                 {
                     Debug.Log("Log_3.7");
-                    _moveSpeed *= speedValue_23;
+                    _moveSpeed += speedValue_23;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -359,7 +359,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_4.7");
 
-                    _moveSpeed *= speedValue_24;
+                    _moveSpeed += speedValue_24;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -368,7 +368,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_5.7");
 
-                    _moveSpeed *= speedValue_25;
+                    _moveSpeed += speedValue_25;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -377,7 +377,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_6.7");
 
-                    _moveSpeed *= speedValue_26;
+                    _moveSpeed += speedValue_26;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -386,7 +386,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_7.7");
 
-                    _moveSpeed -= speedValue_27;
+                    _moveSpeed += speedValue_27;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -395,7 +395,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_8.7");
 
-                    _moveSpeed -= speedValue_28;
+                    _moveSpeed += speedValue_28;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -403,7 +403,7 @@ namespace JGM.Game.Rollers
                 if (itemTime_1 > 5.00f && itemTime_1 <= 5.50f)
                 {
                     Debug.Log("Log_9.7");
-                    _moveSpeed -= speedValue_29;
+                    _moveSpeed += speedValue_29;
                     newSpeed_1 = _moveSpeed;
                     Debug.Log("slot 1 " + newSpeed_1);
 
@@ -412,7 +412,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_10.7");
 
-                    _moveSpeed -= speedValue_30;
+                    _moveSpeed += speedValue_30;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -421,7 +421,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_11.7");
 
-                    _moveSpeed -= speedValue_31;
+                    _moveSpeed += speedValue_31;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -430,7 +430,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_12.7");
 
-                    _moveSpeed -= speedValue_32;
+                    _moveSpeed += speedValue_32;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -439,7 +439,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_12.7");
 
-                    _moveSpeed -= speedValue_33;
+                    _moveSpeed += speedValue_33;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -448,7 +448,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_12.7");
 
-                    _moveSpeed -= speedValue_34;
+                    _moveSpeed += speedValue_34;
                     newSpeed_1 = _moveSpeed;
 
 
@@ -457,7 +457,7 @@ namespace JGM.Game.Rollers
                 {
                     Debug.Log("Log_12.7");
 
-                    _moveSpeed -= speedValue_35;
+                    _moveSpeed += speedValue_35;
                     newSpeed_1 = _moveSpeed;
 
 
