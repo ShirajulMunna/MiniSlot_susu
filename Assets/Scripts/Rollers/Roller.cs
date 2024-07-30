@@ -42,7 +42,7 @@ namespace JGM.Game.Rollers
         private bool _centerItemsOnScreen = false;
 
         public bool increasedSpeed=true;
-        public int spinTime;
+        public int spinTime=5;
         public float totalTime { set; get; }
 
         public void Initialize(RollerSequenceLibrary itemSequence, SpriteLibrary spriteAssets)
@@ -55,7 +55,6 @@ namespace JGM.Game.Rollers
         private void Start()
         {
             _itemSpinSpeed = PlayerPrefs.GetInt("rotationSpeed");
-            spinTime = PlayerPrefs.GetInt("rotationTime", 5);
         }
 
 
