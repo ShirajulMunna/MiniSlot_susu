@@ -411,6 +411,8 @@ public class GameManager : MonoBehaviour
         if(value == 1)
         {
             PlayerPrefs.SetInt("rotationTime", 5);
+            //Roller.instance.spinTime = 5;
+
             RollerManager.Instance._rollers[0].GetComponent<Roller>().spinTime=5; 
             RollerManager.Instance._rollers[1].GetComponent<Roller>().spinTime = 5;
             RollerManager.Instance._rollers[2].GetComponent<Roller>().spinTime = 5;
@@ -420,6 +422,8 @@ public class GameManager : MonoBehaviour
         {
 
             PlayerPrefs.SetInt("rotationTime", 7);
+          //  Roller.instance.spinTime = 7;
+
             RollerManager.Instance._rollers[0].GetComponent<Roller>().spinTime = 7;
             RollerManager.Instance._rollers[1].GetComponent<Roller>().spinTime = 7;
             RollerManager.Instance._rollers[2].GetComponent<Roller>().spinTime = 7;
