@@ -27,7 +27,7 @@ namespace JGM.Game.Rollers
 
         private const float _startingRollerXPosition = -100f;
         private const float _spacingBetweenRollers = 100.0f;
-        private const float _delayBetweenRollersInSeconds = 0.5f;
+        private const float _delayBetweenRollersInSeconds = 0.3f;
        
 
         public const int NumberOfRowsInGrid = 3;
@@ -100,8 +100,12 @@ namespace JGM.Game.Rollers
 
         private IEnumerator SpinRollers()
         {
+            GameObject.Find("Collider_1").GetComponent<BoxCollider2D>().enabled = true;
+           
+
+
             settingButton.enabled = false;
-            _audioService.Play("Spin Roller", true);
+           // _audioService.Play("Spin Roller", true);
             for (int i = 0; i < _rollers.Length; ++i)
             {
                 _rollers[i].StartSpin();

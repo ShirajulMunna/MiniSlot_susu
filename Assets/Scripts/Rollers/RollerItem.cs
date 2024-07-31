@@ -1,5 +1,7 @@
-﻿ using UnityEngine;
+﻿using JGM.Game.Audio;
+using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace JGM.Game.Rollers
 {
@@ -60,6 +62,7 @@ namespace JGM.Game.Rollers
 
 
 
+        [Inject] private IAudioService _audioService;
 
 
         public void Initialize(Roller roller, RollerItemType type, Sprite sprite, float moveSpeed, float bottomLimit)
@@ -86,32 +89,32 @@ namespace JGM.Game.Rollers
                 if (_roller.name == "roller_1")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[0].GetComponent<Roller>().totalTime;
-                    div = 0.8f;
+                    div = 1f;
                 }
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 0.9f;
+                    div = 1.75f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 0.85f;
+                    div = 2.250f;
                 }
 
 
                 itemTime_1 = itemTime_1 / div;
                 if (itemTime_1 > 0 && itemTime_1 <= 1f)
                 {
-                    Debug.Log("Log_1");
+                  
                     _moveSpeed += speedValue_1;
                     newSpeed_1 = _moveSpeed;
-                    Debug.Log("slot 1 " + newSpeed_1);
+                    
 
                 }
                 else if (itemTime_1 > 1f && itemTime_1 <= 1.75f)
                 {
-                    Debug.Log("Log_2");
+                 
 
                     _moveSpeed += speedValue_2;
                     newSpeed_1 = _moveSpeed;
@@ -120,7 +123,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 1.75f && itemTime_1 <= 2.0f)
                 {
-                    Debug.Log("Log_2");
+                  
 
                     _moveSpeed += speedValue_3;
                     newSpeed_1 = _moveSpeed;
@@ -129,7 +132,14 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 2.0f && itemTime_1 <= 2.5f)
                 {
-                    Debug.Log("Log_2");
+                 
+                    if (_roller.name == "roller_1")
+                    {
+                        GameObject.Find("Collider_1").GetComponent<BoxCollider2D>().enabled = false;
+                        GameObject.Find("Collider_3").GetComponent<BoxCollider2D>().enabled = true;
+
+
+                    }
 
                     _moveSpeed += speedValue_4;
                     newSpeed_1 = _moveSpeed;
@@ -138,7 +148,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 2.5f && itemTime_1 <= 3.00f)
                 {
-                    Debug.Log("Log_2");
+                  
 
                     _moveSpeed += speedValue_5;
                     newSpeed_1 = _moveSpeed;
@@ -147,7 +157,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 3.0f && itemTime_1 <= 4.00f)
                 {
-                    Debug.Log("Log_2");
+                
 
                     _moveSpeed += speedValue_6;
                     newSpeed_1 = _moveSpeed;
@@ -156,7 +166,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 4.0f && itemTime_1 <= 4.50f)
                 {
-                    Debug.Log("Log_2");
+              
 
                     _moveSpeed += speedValue_7;
                     newSpeed_1 = _moveSpeed;
@@ -165,7 +175,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 4.50f && itemTime_1 <= 5.00f)
                 {
-                    Debug.Log("Log_2");
+             
 
                     _moveSpeed += speedValue_8;
                     newSpeed_1 = _moveSpeed;
@@ -178,40 +188,41 @@ namespace JGM.Game.Rollers
             }
             else if (timer == 7)
             {
-                Debug.Log("In 7");
+            
                 _moveSpeed = 500;
                 float itemTime_1 = 0;
                 float div = 1;
+
                 if (_roller.name == "roller_1")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[0].GetComponent<Roller>().totalTime;
-                    div = 0.8f;
+                    div = 1f;
                 }
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 1.4f;
+                    div = 1.375f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 2f;
+                    div = 1.75f;
                 }
 
 
                 itemTime_1 = itemTime_1 / div;
                 if (itemTime_1 > 0 && itemTime_1 <= 1f)
                 {
-                    Debug.Log("Log_1.7");
+                  
                     _moveSpeed += speedValue_9;
                    
                     newSpeed_1 = _moveSpeed;
-                    Debug.Log("slot 1 " + newSpeed_1);
+                  
 
                 }
                 else if (itemTime_1 > 1f && itemTime_1 <= 1.75f)
                 {
-                    Debug.Log("Log_2.7");
+                  
                     _moveSpeed += speedValue_10;
                     newSpeed_1 = _moveSpeed;
 
@@ -219,7 +230,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 1.75f && itemTime_1 <= 2.0f)
                 {
-                    Debug.Log("Log_3.7");
+                   
                     _moveSpeed += speedValue_11;
                     newSpeed_1 = _moveSpeed;
 
@@ -227,7 +238,14 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 2.0f && itemTime_1 <= 2.5f)
                 {
-                    Debug.Log("Log_4.7");
+                  
+                    if (_roller.name == "roller_1")
+                    {
+                        GameObject.Find("Collider_1").GetComponent<BoxCollider2D>().enabled = false;
+                        GameObject.Find("Collider_3").GetComponent<BoxCollider2D>().enabled = true;
+
+
+                    }
 
                     _moveSpeed += speedValue_12;
                     newSpeed_1 = _moveSpeed;
@@ -236,7 +254,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 2.5f && itemTime_1 <= 3.00f)
                 {
-                    Debug.Log("Log_5.7");
+                
 
                     _moveSpeed += speedValue_13;
                     newSpeed_1 = _moveSpeed;
@@ -245,7 +263,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 3.0f && itemTime_1 <= 4.00f)
                 {
-                    Debug.Log("Log_6.7");
+               
 
                     _moveSpeed += speedValue_14;
                     newSpeed_1 = _moveSpeed;
@@ -254,17 +272,17 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 4.0f && itemTime_1 <= 4.50f)
                 {
-                    Debug.Log("Log_7.7");
+              
 
                     _moveSpeed += speedValue_15;
-                    Debug.Log("Sp" + _moveSpeed);
+                  
                     newSpeed_1 = _moveSpeed;
 
 
                 }
                 else if (itemTime_1 > 4.50f && itemTime_1 <= 5.00f)
                 {
-                    Debug.Log("Log_8.7");
+                
 
                     _moveSpeed += speedValue_16;
                     newSpeed_1 = _moveSpeed;
@@ -273,7 +291,7 @@ namespace JGM.Game.Rollers
                 }
                 if (itemTime_1 > 5.00f && itemTime_1 <= 5.50f)
                 {
-                    Debug.Log("Log_9.7");
+                
                     _moveSpeed += speedValue_17;
                     newSpeed_1 = _moveSpeed;
                    
@@ -281,7 +299,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 5.50f && itemTime_1 <= 6.00f)
                 {
-                    Debug.Log("Log_10.7");
+                
 
                     _moveSpeed += speedValue_18;
                     newSpeed_1 = _moveSpeed;
@@ -290,7 +308,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 6.00f && itemTime_1 <= 6.50f)
                 {
-                    Debug.Log("Log_11.7");
+                  
 
                     _moveSpeed += speedValue_19;
                     newSpeed_1 = _moveSpeed;
@@ -299,7 +317,7 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 6.50f && itemTime_1 <= 7.00f)
                 {
-                    Debug.Log("Log_12.7");
+                  
 
                     _moveSpeed += speedValue_20;
                     newSpeed_1 = _moveSpeed;
@@ -318,17 +336,17 @@ namespace JGM.Game.Rollers
                 if (_roller.name == "roller_1")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[0].GetComponent<Roller>().totalTime;
-                    div = 0.8f;
+                    div = 1f;
                 }
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 1.4f;
+                    div = 1.125f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 2f;
+                    div = 1.250f;
                 }
 
 
@@ -358,7 +376,13 @@ namespace JGM.Game.Rollers
                 }
                 else if (itemTime_1 > 2.0f && itemTime_1 <= 2.5f)
                 {
-                    
+                    if (_roller.name == "roller_1")
+                    {
+                         GameObject.Find("Collider_1").GetComponent<BoxCollider2D>().enabled = false;
+                         GameObject.Find("Collider_3").GetComponent<BoxCollider2D>().enabled = true;
+
+
+                    }
 
                     _moveSpeed += speedValue_24;
                     newSpeed_1 = _moveSpeed;
@@ -465,6 +489,8 @@ namespace JGM.Game.Rollers
 
                 }
 
+                Debug.Log("move fdsfgsfds" + _moveSpeed);
+
 
             }
 
@@ -487,6 +513,19 @@ namespace JGM.Game.Rollers
         public void setType(RollerItemType type)
         {
             Type = type;
+        }
+
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "sound") 
+            {
+                
+                 _audioService.Play("Spin Roller");
+               
+
+            }
+
         }
 
     }

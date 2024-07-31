@@ -41,7 +41,7 @@ namespace JGM.Game.Rewards
             StartCoroutine(RetrieveRewards(grid));
         }
 
-        private IEnumerator RetrieveRewards(IGrid grid, float delayBetweenRewardsInSeconds = 5f)
+        private IEnumerator RetrieveRewards(IGrid grid, float delayBetweenRewardsInSeconds = 1f)
         {
             particleStyleMode = GameManager.Instance.getParticleStyleMode();
             Debug.Log("particleStyleMode "+ particleStyleMode);

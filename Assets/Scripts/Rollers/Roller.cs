@@ -16,7 +16,10 @@ namespace JGM.Game.Rollers
         private float journeyLength;    // Distance between startMarker and endMarker
         private float startTime;
         int current_obj;
-        private string name { get; set; }
+        private string Name 
+        { get { return name; }
+          set { name = value; } 
+        }
      
         //public static Roller Instance;
 
@@ -93,7 +96,7 @@ namespace JGM.Game.Rollers
 
             if (rollerName == "roller_1")
             {
-                currentSpinTmeInSeconds = spinTime - 2;
+                currentSpinTmeInSeconds = spinTime - 3;
             }
             else if (rollerName == "roller_2")
             {
@@ -289,12 +292,12 @@ namespace JGM.Game.Rollers
             _centerItemsOnScreen = true;
             _audioService.Play("Stop Roller");
             // totalTime = 0;
+          
+            Debug.Log("rollername = " + name);
             
-
-
-
-
             }
+
+       
 
         private void CenterItemsOnScreenIfNecessary()
         {
