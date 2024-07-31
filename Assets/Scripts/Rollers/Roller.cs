@@ -97,11 +97,11 @@ namespace JGM.Game.Rollers
             }
             else if (rollerName == "roller_2")
             {
-                currentSpinTmeInSeconds = 1f;
+                currentSpinTmeInSeconds = 1.5f;
             }
             else
             {
-                currentSpinTmeInSeconds = 1f;
+                currentSpinTmeInSeconds = 1.5f;
             }
 
             StartCoroutine(StopSpinAfterDelay(currentSpinTmeInSeconds, rand, noMatchRand));

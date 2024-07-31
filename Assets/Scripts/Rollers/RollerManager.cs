@@ -27,7 +27,7 @@ namespace JGM.Game.Rollers
 
         private const float _startingRollerXPosition = -100f;
         private const float _spacingBetweenRollers = 100.0f;
-        private const float _delayBetweenRollersInSeconds = 0.25f;
+        private const float _delayBetweenRollersInSeconds = 0.5f;
        
 
         public const int NumberOfRowsInGrid = 3;

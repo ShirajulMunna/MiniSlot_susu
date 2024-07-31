@@ -131,11 +131,11 @@ MonoBehaviour:
   speedValue_18: 10
   speedValue_19: 10
   speedValue_20: 10
-  speedValue_21: 2000
-  speedValue_22: 2000
-  speedValue_23: 2000
+  speedValue_21: 3500
+  speedValue_22: 3500
+  speedValue_23: 3500
   speedValue_24: 2000
-  speedValue_25: 1500
+  speedValue_25: 2000
   speedValue_26: 1500
   speedValue_27: 1500
   speedValue_28: 600
@@ -144,5 +144,5 @@ MonoBehaviour:
   speedValue_31: 100
   speedValue_32: 80
   speedValue_33: 60
-  speedValue_34: 40
-  speedValue_35: 10
+  speedValue_34: 20
+  speedValue_35: 20

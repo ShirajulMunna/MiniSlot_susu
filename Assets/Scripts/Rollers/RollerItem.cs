@@ -16,6 +16,8 @@ namespace JGM.Game.Rollers
 
         public float newSpeed_1 { set; get; }
 
+
+
         [Header("for 5 seconds ")]
         [SerializeField] private float speedValue_1;
         [SerializeField] private float speedValue_2;
@@ -143,7 +145,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 3.5f && itemTime_1 <= 4.00f)
+                else if (itemTime_1 > 3.0f && itemTime_1 <= 4.00f)
                 {
                     Debug.Log("Log_2");
 
@@ -188,12 +190,12 @@ namespace JGM.Game.Rollers
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 0.9f;
+                    div = 1.4f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 0.8f;
+                    div = 2f;
                 }
 
 
@@ -241,7 +243,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 3.5f && itemTime_1 <= 4.00f)
+                else if (itemTime_1 > 3.0f && itemTime_1 <= 4.00f)
                 {
                     Debug.Log("Log_6.7");
 
@@ -321,12 +323,12 @@ namespace JGM.Game.Rollers
                 else if (_roller.name == "roller_2")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[1].GetComponent<Roller>().totalTime;
-                    div = 0.9f;
+                    div = 1.4f;
                 }
                 else if (_roller.name == "roller_3")
                 {
                     itemTime_1 = RollerManager.Instance._rollers[2].GetComponent<Roller>().totalTime;
-                    div = 0.85f;
+                    div = 2f;
                 }
 
 
@@ -373,7 +375,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 3.5f && itemTime_1 <= 4.00f)
+                else if (itemTime_1 > 3.0f && itemTime_1 <= 4.00f)
                 {
                    
 
@@ -435,7 +437,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 7.50f && itemTime_1 <= 8.00f)
+                else if (itemTime_1 > 7.00f && itemTime_1 <= 8.00f)
                 {
                     
 
@@ -444,7 +446,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 8.50f && itemTime_1 <= 9.00f)
+                else if (itemTime_1 > 8.00f && itemTime_1 <= 9.00f)
                 {
                     
 
@@ -453,7 +455,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 9.50f && itemTime_1 <= 10.00f)
+                else if (itemTime_1 > 9.00f && itemTime_1 <= 10.00f)
                 {
                     
 
