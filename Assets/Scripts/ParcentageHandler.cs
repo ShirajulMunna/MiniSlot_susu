@@ -41,20 +41,20 @@ public class ParcentageHandler : MonoBehaviour
 
         if (giftitemCount == 3)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_0.0");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.0");
             parcentageSliders[0].value = getValue;
 
 
         }
         else if (giftitemCount == 4)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_0.1");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.0");
             parcentageSliders[0].value = getValue;
 
         }
         else if (giftitemCount == 5) 
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_0.2");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.0");
             parcentageSliders[0].value = getValue;
         }
       
@@ -64,20 +64,20 @@ public class ParcentageHandler : MonoBehaviour
     {
         if (giftitemCount == 3)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_1.0");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.1");
             parcentageSliders[1].value = getValue;
 
 
         }
         else if (giftitemCount == 4)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_1.1");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.1");
             parcentageSliders[1].value = getValue;
 
         }
         else if (giftitemCount == 5)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_1.2");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.1");
             parcentageSliders[1].value = getValue;
         }
 
@@ -86,20 +86,20 @@ public class ParcentageHandler : MonoBehaviour
     {
         if (giftitemCount == 3)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_2.0");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.2");
             parcentageSliders[2].value = getValue;
 
 
         }
         else if (giftitemCount == 4)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_2.1");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.2");
             parcentageSliders[2].value = getValue;
 
         }
         else if (giftitemCount == 5)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_2.2");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.2");
             parcentageSliders[2].value = getValue;
         }
 
@@ -108,20 +108,20 @@ public class ParcentageHandler : MonoBehaviour
     {
         if (giftitemCount == 3)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_3.0");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.3");
             parcentageSliders[3].value = getValue;
 
 
         }
         else if (giftitemCount == 4)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_3.1");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.3");
             parcentageSliders[3].value = getValue;
 
         }
         else if (giftitemCount == 5)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_3.2");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.3");
             parcentageSliders[3].value = getValue;
         }
 
@@ -130,20 +130,20 @@ public class ParcentageHandler : MonoBehaviour
     {
         if (giftitemCount == 3)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_4.0");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.4");
             parcentageSliders[4].value = 0;
 
 
         }
         else if (giftitemCount == 4)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_4.1");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.4");
             parcentageSliders[4].value = getValue;
 
         }
         else if (giftitemCount == 5)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_4.2");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.4");
             parcentageSliders[4].value = 0;
         }
 
@@ -152,20 +152,20 @@ public class ParcentageHandler : MonoBehaviour
     {
         if (giftitemCount == 3)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_5.0");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.5");
             parcentageSliders[5].value = 0;
 
 
         }
         else if (giftitemCount == 4)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_5.1");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.5");
             parcentageSliders[5].value = 0;
 
         }
         else if (giftitemCount == 5)
         {
-            float getValue = PlayerPrefs.GetFloat("sliderValue_5.2");
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.5");
             parcentageSliders[5].value = getValue;
         }
 

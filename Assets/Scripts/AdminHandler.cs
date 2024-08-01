@@ -60,48 +60,40 @@ public class AdminHandler : MonoBehaviour
 
     public void SetValue() 
     {
-        /* rotationSpeed = PlayerPrefs.GetInt("rotationSpeed", 500);
-         rotationTime = PlayerPrefs.GetInt("rotationTime", 6);
-         gift = PlayerPrefs.GetInt("gift", 3);
-         particles = PlayerPrefs.GetInt("particles", 1);
-
-         UpdateSpeedSlider();
-         UpdateTimeSlider();
-         UpdateGiftSlider();
-         UpdateParticlesSlider();*/
+       
         gift = GameManager.Instance.giftItemCount;
-        float getValue_0_0 = PlayerPrefs.GetFloat("sliderValue_0.0");
-        float getValue_0_1 = PlayerPrefs.GetFloat("sliderValue_0.1");
-        float getValue_0_2 = PlayerPrefs.GetFloat("sliderValue_0.2");
-
-        float getValue_1_0 = PlayerPrefs.GetFloat("sliderValue_1.0");
-        float getValue_1_1 = PlayerPrefs.GetFloat("sliderValue_1.1");
-        float getValue_1_2 = PlayerPrefs.GetFloat("sliderValue_1.2");
-
-        float getValue_2_0 = PlayerPrefs.GetFloat("sliderValue_2.0");
-        float getValue_2_1 = PlayerPrefs.GetFloat("sliderValue_2.1");
-        float getValue_2_2 = PlayerPrefs.GetFloat("sliderValue_2.2");
-
         float getValue_3_0 = PlayerPrefs.GetFloat("sliderValue_3.0");
-        float getValue_3_1 = PlayerPrefs.GetFloat("sliderValue_3.1");
-        float getValue_3_2 = PlayerPrefs.GetFloat("sliderValue_3.2");
-
         float getValue_4_0 = PlayerPrefs.GetFloat("sliderValue_4.0");
-        float getValue_4_1 = PlayerPrefs.GetFloat("sliderValue_4.1");
-        float getValue_4_2 = PlayerPrefs.GetFloat("sliderValue_4.2");
-
-
         float getValue_5_0 = PlayerPrefs.GetFloat("sliderValue_5.0");
+
+        float getValue_3_1 = PlayerPrefs.GetFloat("sliderValue_3.0");
+        float getValue_4_1 = PlayerPrefs.GetFloat("sliderValue_4.1");
         float getValue_5_1 = PlayerPrefs.GetFloat("sliderValue_5.1");
+
+        float getValue_3_2 = PlayerPrefs.GetFloat("sliderValue_3.2");
+        float getValue_4_2 = PlayerPrefs.GetFloat("sliderValue_4.2");
         float getValue_5_2 = PlayerPrefs.GetFloat("sliderValue_5.2");
+
+        float getValue_3_3 = PlayerPrefs.GetFloat("sliderValue_3.3");
+        float getValue_4_3 = PlayerPrefs.GetFloat("sliderValue_4.3");
+        float getValue_5_3 = PlayerPrefs.GetFloat("sliderValue_5.3");
+
+        float getValue_3_4 = PlayerPrefs.GetFloat("sliderValue_3.4");
+        float getValue_4_4 = PlayerPrefs.GetFloat("sliderValue_4.4");
+        float getValue_5_4 = PlayerPrefs.GetFloat("sliderValue_5.4");
+
+
+        float getValue_3_5 = PlayerPrefs.GetFloat("sliderValue_3.5");
+        float getValue_4_5 = PlayerPrefs.GetFloat("sliderValue_4.5");
+        float getValue_5_5 = PlayerPrefs.GetFloat("sliderValue_5.5");
 
         if(gift == 3)
         {
             Debug.Log("1000.1");
-            GameManager.Instance.sliderValue[0] = getValue_0_0;
-            GameManager.Instance.sliderValue[1] = getValue_1_0;
-            GameManager.Instance.sliderValue[2] = getValue_2_0;
-            GameManager.Instance.sliderValue[3] = getValue_3_0;
+            GameManager.Instance.sliderValue[0] = getValue_3_0;
+            GameManager.Instance.sliderValue[1] = getValue_3_1;
+            GameManager.Instance.sliderValue[2] = getValue_3_2;
+            GameManager.Instance.sliderValue[3] = getValue_3_3;
             GameManager.Instance.sliderValue[4] = 0;
             GameManager.Instance.sliderValue[5] = 0;
 
@@ -112,22 +104,22 @@ public class AdminHandler : MonoBehaviour
         else if(gift == 4)
         {
             Debug.Log("1000.2");
-            GameManager.Instance.sliderValue[0] = getValue_0_0;
-            GameManager.Instance.sliderValue[1] = getValue_1_0;
-            GameManager.Instance.sliderValue[2] = getValue_2_0;
-            GameManager.Instance.sliderValue[3] = getValue_3_0;
-            GameManager.Instance.sliderValue[4] = getValue_4_0;
+            GameManager.Instance.sliderValue[0] = getValue_4_0;
+            GameManager.Instance.sliderValue[1] = getValue_4_0;
+            GameManager.Instance.sliderValue[2] = getValue_4_2;
+            GameManager.Instance.sliderValue[3] = getValue_4_3;
+            GameManager.Instance.sliderValue[4] = getValue_4_4;
             GameManager.Instance.sliderValue[5] = 0;
         }
         else if (gift==5)
         {
             Debug.Log("1000.3");
-            GameManager.Instance.sliderValue[0] = getValue_0_0;
-            GameManager.Instance.sliderValue[1] = getValue_1_0;
-            GameManager.Instance.sliderValue[2] = getValue_2_0;
-            GameManager.Instance.sliderValue[3] = getValue_3_0;
-            GameManager.Instance.sliderValue[4] = getValue_4_0;
-            GameManager.Instance.sliderValue[5] = getValue_5_0;
+            GameManager.Instance.sliderValue[0] = getValue_5_0;
+            GameManager.Instance.sliderValue[1] = getValue_5_1;
+            GameManager.Instance.sliderValue[2] = getValue_5_2;
+            GameManager.Instance.sliderValue[3] = getValue_5_3;
+            GameManager.Instance.sliderValue[4] = getValue_5_4;
+            GameManager.Instance.sliderValue[5] = getValue_5_5;
         }
 
     }

@@ -278,14 +278,14 @@ public class GameManager : MonoBehaviour
         if (giftItemCount == 3)
         {
            
-            PlayerPrefs.SetFloat("sliderValue_0.0", value);
+            PlayerPrefs.SetFloat("sliderValue_3.0", value);
             Debug.Log("sliderValue_0.0");
 
         }
         else if (giftItemCount == 4)
         {
            
-            PlayerPrefs.SetFloat("sliderValue_0.1", value);
+            PlayerPrefs.SetFloat("sliderValue_4.0", value);
             Debug.Log("sliderValue_0.1");
 
 
@@ -293,7 +293,7 @@ public class GameManager : MonoBehaviour
         else if (giftItemCount == 5)
         {
            
-            PlayerPrefs.SetFloat("sliderValue_0.2", value);
+            PlayerPrefs.SetFloat("sliderValue_5.0", value);
             Debug.Log("sliderValue_0.2");
 
 
@@ -320,14 +320,14 @@ public class GameManager : MonoBehaviour
         if (giftItemCount == 3)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_1.0", value);
+            PlayerPrefs.SetFloat("sliderValue_3.1", value);
             Debug.Log("sliderValue_1.0");
 
         }
         else if (giftItemCount == 4)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_1.1", value);
+            PlayerPrefs.SetFloat("sliderValue_4.1", value);
             Debug.Log("sliderValue_1.1");
 
 
@@ -335,7 +335,7 @@ public class GameManager : MonoBehaviour
         else if (giftItemCount == 5)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_1.2", value);
+            PlayerPrefs.SetFloat("sliderValue_5.1", value);
             Debug.Log("sliderValue_1.2");
 
 
@@ -362,14 +362,14 @@ public class GameManager : MonoBehaviour
         if (giftItemCount == 3)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_2.0", value);
+            PlayerPrefs.SetFloat("sliderValue_3.2", value);
             Debug.Log("sliderValue_0.0");
 
         }
         else if (giftItemCount == 4)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_2.1", value);
+            PlayerPrefs.SetFloat("sliderValue_4.2", value);
             Debug.Log("sliderValue_0.1");
 
 
@@ -377,7 +377,7 @@ public class GameManager : MonoBehaviour
         else if (giftItemCount == 5)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_2.2", value);
+            PlayerPrefs.SetFloat("sliderValue_5.2", value);
             Debug.Log("sliderValue_0.2");
 
 
@@ -404,14 +404,14 @@ public class GameManager : MonoBehaviour
         if (giftItemCount == 3)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_3.0", value);
+            PlayerPrefs.SetFloat("sliderValue_3.3", value);
             Debug.Log("sliderValue_0.0");
 
         }
         else if (giftItemCount == 4)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_3.1", value);
+            PlayerPrefs.SetFloat("sliderValue_4.3", value);
             Debug.Log("sliderValue_0.1");
 
 
@@ -419,7 +419,7 @@ public class GameManager : MonoBehaviour
         else if (giftItemCount == 5)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_3.2", value);
+            PlayerPrefs.SetFloat("sliderValue_5.3", value);
             Debug.Log("sliderValue_0.2");
 
 
@@ -445,14 +445,14 @@ public class GameManager : MonoBehaviour
         if (giftItemCount == 3)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_4.0", value);
+            PlayerPrefs.SetFloat("sliderValue_3.4", value);
             Debug.Log("sliderValue_0.0");
 
         }
         else if (giftItemCount == 4)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_4.1", value);
+            PlayerPrefs.SetFloat("sliderValue_4.4", value);
             Debug.Log("sliderValue_0.1");
 
 
@@ -460,7 +460,7 @@ public class GameManager : MonoBehaviour
         else if (giftItemCount == 5)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_4.2", value);
+            PlayerPrefs.SetFloat("sliderValue_5.4", value);
             Debug.Log("sliderValue_0.2");
 
 
@@ -486,14 +486,14 @@ public class GameManager : MonoBehaviour
         if (giftItemCount == 3)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_5.0", value);
+            PlayerPrefs.SetFloat("sliderValue_3.5", value);
             Debug.Log("sliderValue_0.0");
 
         }
         else if (giftItemCount == 4)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_5.1", value);
+            PlayerPrefs.SetFloat("sliderValue_4.5", value);
             Debug.Log("sliderValue_0.1");
 
 
@@ -501,7 +501,7 @@ public class GameManager : MonoBehaviour
         else if (giftItemCount == 5)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_5.2", value);
+            PlayerPrefs.SetFloat("sliderValue_5.5", value);
             Debug.Log("sliderValue_0.2");
 
 
@@ -527,14 +527,14 @@ public class GameManager : MonoBehaviour
         if (giftItemCount == 3)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_6.0", value);
+            PlayerPrefs.SetFloat("sliderValue_3.6", value);
             Debug.Log("sliderValue_0.0");
 
         }
         else if (giftItemCount == 4)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_6.1", value);
+            PlayerPrefs.SetFloat("sliderValue_4.6", value);
             Debug.Log("sliderValue_0.1");
 
 
@@ -542,7 +542,7 @@ public class GameManager : MonoBehaviour
         else if (giftItemCount == 5)
         {
 
-            PlayerPrefs.SetFloat("sliderValue_6.2", value);
+            PlayerPrefs.SetFloat("sliderValue_5.6", value);
             Debug.Log("sliderValue_0.2");
 
 
@@ -820,6 +820,69 @@ public class GameManager : MonoBehaviour
        // PlayerPrefs.SetInt("Quit", 50);
     }
 
+    public void SetValue()
+    {
+
+        
+        float getValue_3_0 = PlayerPrefs.GetFloat("sliderValue_3.0");
+        float getValue_4_0 = PlayerPrefs.GetFloat("sliderValue_4.0");
+        float getValue_5_0 = PlayerPrefs.GetFloat("sliderValue_5.0");
+
+        float getValue_3_1 = PlayerPrefs.GetFloat("sliderValue_3.1");
+        float getValue_4_1 = PlayerPrefs.GetFloat("sliderValue_4.1");
+        float getValue_5_1 = PlayerPrefs.GetFloat("sliderValue_5.1");
+
+        float getValue_3_2 = PlayerPrefs.GetFloat("sliderValue_3.2");
+        float getValue_4_2 = PlayerPrefs.GetFloat("sliderValue_4.2");
+        float getValue_5_2 = PlayerPrefs.GetFloat("sliderValue_5.2");
+
+        float getValue_3_3 = PlayerPrefs.GetFloat("sliderValue_3.3");
+        float getValue_4_3 = PlayerPrefs.GetFloat("sliderValue_4.3");
+        float getValue_5_3 = PlayerPrefs.GetFloat("sliderValue_5.3");
+
+        float getValue_3_4 = PlayerPrefs.GetFloat("sliderValue_3.4");
+        float getValue_4_4 = PlayerPrefs.GetFloat("sliderValue_4.4");
+        float getValue_5_4 = PlayerPrefs.GetFloat("sliderValue_5.4");
+
+
+        float getValue_3_5 = PlayerPrefs.GetFloat("sliderValue_3.5");
+        float getValue_4_5 = PlayerPrefs.GetFloat("sliderValue_4.5");
+        float getValue_5_5 = PlayerPrefs.GetFloat("sliderValue_5.5");
+
+        if (giftItemCount == 3)
+        {
+            Debug.Log("1000.1");
+            sliderValue[0] = getValue_3_0;
+            sliderValue[1] = getValue_3_1;
+            sliderValue[2] = getValue_3_2;
+            sliderValue[3] = getValue_3_3;
+            sliderValue[4] = 0;
+            sliderValue[5] = 0;
+
+
+        }
+        else if (giftItemCount == 4)
+        {
+            Debug.Log("1000.2");
+            sliderValue[0] = getValue_4_0;
+            sliderValue[1] = getValue_4_1;
+            sliderValue[2] = getValue_4_2;
+            sliderValue[3] = getValue_4_3;
+            sliderValue[4] = getValue_4_4;
+            sliderValue[5] = 0;
+        }
+        else if (giftItemCount == 5)
+        {
+            Debug.Log("1000.3");
+            sliderValue[0] = getValue_5_0;
+            sliderValue[1] = getValue_5_1;
+            sliderValue[2] = getValue_5_2;
+            sliderValue[3] = getValue_5_3;
+            sliderValue[4] = getValue_5_4;
+            sliderValue[5] = getValue_5_5;
+        }
+
+    }
 
 
 }
