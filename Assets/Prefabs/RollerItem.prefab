@@ -119,36 +119,36 @@ MonoBehaviour:
   speedValue_3: 500
   speedValue_4: 300
   speedValue_5: 100
-  speedValue_6: 50
-  speedValue_7: 40
-  speedValue_8: 30
-  speedValue_9: 2500
-  speedValue_10: 2000
-  speedValue_11: 1500
-  speedValue_12: 1000
-  speedValue_13: 700
-  speedValue_14: 400
-  speedValue_15: 200
-  speedValue_16: 100
-  speedValue_17: 50
-  speedValue_18: 10
-  speedValue_19: 10
+  speedValue_6: 20
+  speedValue_7: 10
+  speedValue_8: 10
+  speedValue_9: 2300
+  speedValue_10: 1500
+  speedValue_11: 1000
+  speedValue_12: 700
+  speedValue_13: 400
+  speedValue_14: 100
+  speedValue_15: 100
+  speedValue_16: 50
+  speedValue_17: 40
+  speedValue_18: 30
+  speedValue_19: 20
   speedValue_20: 10
-  speedValue_21: 2500
-  speedValue_22: 2400
-  speedValue_23: 2100
-  speedValue_24: 1800
-  speedValue_25: 1600
-  speedValue_26: 1200
+  speedValue_21: 2300
+  speedValue_22: 2000
+  speedValue_23: 1800
+  speedValue_24: 1500
+  speedValue_25: 1200
+  speedValue_26: 900
   speedValue_27: 900
   speedValue_28: 600
   speedValue_29: 400
   speedValue_30: 200
   speedValue_31: 100
   speedValue_32: 80
-  speedValue_33: 60
-  speedValue_34: 20
-  speedValue_35: 20
+  speedValue_33: 20
+  speedValue_34: 10
+  speedValue_35: 10
 --- !u!61 &2695899133721404673
 BoxCollider2D:
   m_ObjectHideFlags: 0
