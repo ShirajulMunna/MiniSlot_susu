@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameButton;
     public GameObject parcentagesOverFlow;
 
+    public int moveSpeed;
+
     private void Awake()
     {
         Instance = this;
@@ -380,16 +382,21 @@ public class GameManager : MonoBehaviour
         if (value == 1)
         {
             //text_RollingSpeedSlider.SetActive(true);
-            PlayerPrefs.SetInt("rotationSpeed", 1000);
+            PlayerPrefs.SetInt("rotationSpeed", 400);
+            moveSpeed = 400;
         }
         else if (value == 2)
         {
             //text_RollingSpeedSlider.SetActive(false);
-            PlayerPrefs.SetInt("rotationSpeed", 2000);
+            PlayerPrefs.SetInt("rotationSpeed", 500);
+            moveSpeed = 500;
+
         }
         else 
         {
-            PlayerPrefs.SetInt("rotationSpeed", 3000);
+            PlayerPrefs.SetInt("rotationSpeed", 600);
+            moveSpeed = 600;
+
 
         }
 

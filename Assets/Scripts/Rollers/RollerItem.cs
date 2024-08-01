@@ -7,19 +7,18 @@ namespace JGM.Game.Rollers
 {
     public class RollerItem : MonoBehaviour
     {
+        public static RollerItem Instance;
         public RollerItemType Type { get; private set; }
-
         [SerializeField]
         private Image _image;
-
         private Roller _roller;
-        private float _moveSpeed;
+        public float _moveSpeed;
         private float _bottomLimit;
-
         public float newSpeed_1 { set; get; }
+        [Inject] private IAudioService _audioService;
 
 
-
+        #region variables
         [Header("for 5 seconds ")]
         [SerializeField] private float speedValue_1;
         [SerializeField] private float speedValue_2;
@@ -60,9 +59,14 @@ namespace JGM.Game.Rollers
         [SerializeField] private float speedValue_34;
         [SerializeField] private float speedValue_35;
 
+        #endregion
 
+        private void Start()
+        {
+            Instance = this;
+            _moveSpeed = PlayerPrefs.GetInt("rotationSpeed", 400);
 
-        [Inject] private IAudioService _audioService;
+        }
 
 
         public void Initialize(Roller roller, RollerItemType type, Sprite sprite, float moveSpeed, float bottomLimit)
@@ -83,7 +87,9 @@ namespace JGM.Game.Rollers
             Debug.Log("rollername " + _roller.name);
             if (timer == 5)
             {
-                _moveSpeed = 500;
+                _moveSpeed = GameManager.Instance.moveSpeed;
+                Debug.Log("update Move " + _moveSpeed);
+
                 float itemTime_1 = 0;
                 float div = 1;
                 if (_roller.name == "roller_1")
@@ -188,8 +194,10 @@ namespace JGM.Game.Rollers
             }
             else if (timer == 7)
             {
-            
-                _moveSpeed = 500;
+
+                _moveSpeed = GameManager.Instance.moveSpeed;
+                Debug.Log("update Move " + _moveSpeed);
+
                 float itemTime_1 = 0;
                 float div = 1;
 
@@ -330,7 +338,10 @@ namespace JGM.Game.Rollers
             }
             else if (timer == 10)
             {
-                _moveSpeed = 500;
+                _moveSpeed = GameManager.Instance.moveSpeed;
+                Debug.Log("update Move " + _moveSpeed);
+
+
                 float itemTime_1 = 0;
                 float div = 1;
                 if (_roller.name == "roller_1")

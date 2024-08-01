@@ -11,10 +11,9 @@ public class AdminHandler : MonoBehaviour
 
     void Start()
     {
-        // Admin
-        rotationSpeed = PlayerPrefs.GetInt("rotationSpeed",1000);
-        Debug.Log("r speed" + rotationSpeed);
-
+     
+        rotationSpeed = PlayerPrefs.GetInt("rotationSpeed",400);
+       
         rotationTime = PlayerPrefs.GetInt("rotationTime",5);
         gift = PlayerPrefs.GetInt("gift",3);
         particles = PlayerPrefs.GetInt("particles",1);
@@ -33,7 +32,6 @@ public class AdminHandler : MonoBehaviour
 
 
 
-        //End Admin
 
     }
 
@@ -41,12 +39,12 @@ public class AdminHandler : MonoBehaviour
     #region
     public void UpdateSpeedSlider()
     {
-        if (rotationSpeed == 1000)
+        if (rotationSpeed == 400)
         {
             adminSliders[0].value = 1;
 
         }
-        else if (rotationSpeed == 2000)
+        else if (rotationSpeed == 500)
         {
             adminSliders[0].value = 2;
 
