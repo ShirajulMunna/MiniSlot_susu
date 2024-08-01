@@ -64,7 +64,7 @@ namespace JGM.Game.Rollers
         private void Start()
         {
             Instance = this;
-            _moveSpeed = PlayerPrefs.GetInt("rotationSpeed", 400);
+            _moveSpeed = PlayerPrefs.GetInt("rotationSpeed", 500);
 
         }
 

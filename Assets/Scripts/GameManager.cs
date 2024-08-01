@@ -45,7 +45,11 @@ public class GameManager : MonoBehaviour
     public GameObject gameButton;
     public GameObject parcentagesOverFlow;
 
+   
     public int moveSpeed;
+    public int rotationSpeed_1;
+    public int rotationSpeed_2;
+    public int rotationSpeed_3;
 
     private void Awake()
     {
@@ -54,6 +58,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        moveSpeed = rotationSpeed_1;
         AudioSource = GetComponent<AudioSource>();
    
     }
@@ -378,24 +383,24 @@ public class GameManager : MonoBehaviour
 
     public void rollingSpeedUpdateHandler(float value)
     {
-        //rollingSpeed = value*1000;
+        
         if (value == 1)
         {
-            //text_RollingSpeedSlider.SetActive(true);
-            PlayerPrefs.SetInt("rotationSpeed", 400);
-            moveSpeed = 400;
+         
+            PlayerPrefs.SetInt("rotationSpeed", rotationSpeed_1);
+            moveSpeed = rotationSpeed_1;
         }
         else if (value == 2)
         {
-            //text_RollingSpeedSlider.SetActive(false);
-            PlayerPrefs.SetInt("rotationSpeed", 500);
-            moveSpeed = 500;
+         
+            PlayerPrefs.SetInt("rotationSpeed", rotationSpeed_2);
+            moveSpeed = rotationSpeed_2;
 
         }
         else 
         {
-            PlayerPrefs.SetInt("rotationSpeed", 600);
-            moveSpeed = 600;
+            PlayerPrefs.SetInt("rotationSpeed", rotationSpeed_3);
+            moveSpeed = rotationSpeed_3;
 
 
         }
