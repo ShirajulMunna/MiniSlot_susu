@@ -6613,6 +6613,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8455166092460118923}
+        m_TargetAssemblyTypeName: AdminHandler, JGM.Game
+        m_MethodName: SetValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1695586739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8298,6 +8310,7 @@ MonoBehaviour:
   itemCount: 3
   percentValues: 000000000000000000000000000000000000000000000000
   sum: 0
+  giftItemCount: 0
 --- !u!224 &2123723527
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16805,19 +16818,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8708165310024686965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2123723526}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: resetHandler
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!224 &4577426624583750398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19563,6 +19564,7 @@ MonoBehaviour:
   - {fileID: 3136249831508167761}
   - {fileID: 4720314693610908445}
   - {fileID: 5212548360365026216}
+  giftitemCount: 0
 --- !u!224 &5850533479517032672
 RectTransform:
   m_ObjectHideFlags: 0

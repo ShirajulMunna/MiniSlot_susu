@@ -52,6 +52,11 @@ public class GameManager : MonoBehaviour
     public int rotationSpeed_3;
 
     public int quitValue;
+    public int itemCount;
+    public int[] percentValues;
+    public int sum = 0;
+    public int giftItemCount;
+
 
     private void Awake()
     {
@@ -61,9 +66,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         quitValue = PlayerPrefs.GetInt("Quit");
-
-      
-
+        giftItemCount = PlayerPrefs.GetInt("gift",3);
         moveSpeed = rotationSpeed_1;
         AudioSource = GetComponent<AudioSource>();
 
@@ -79,10 +82,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int itemCount;
-    public int[] percentValues;
-    public int sum=0;
    
+
 
 
 
@@ -97,9 +98,12 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("selected box" + selectedParcentages);
             sliders[0].value = selectedParcentages;
+           
             percentValues[0] = selectedParcentages;
             sliderValue[0] = selectedParcentages;
             CalculateParcentThreshHold();
+
+           
 
 
         }
@@ -269,11 +273,36 @@ public class GameManager : MonoBehaviour
         else
         {
             text_percentageSlider1.SetActive(false);
+        }      
+
+        if (giftItemCount == 3)
+        {
+           
+            PlayerPrefs.SetFloat("sliderValue_0.0", value);
+            Debug.Log("sliderValue_0.0");
+
+        }
+        else if (giftItemCount == 4)
+        {
+           
+            PlayerPrefs.SetFloat("sliderValue_0.1", value);
+            Debug.Log("sliderValue_0.1");
+
+
+        }
+        else if (giftItemCount == 5)
+        {
+           
+            PlayerPrefs.SetFloat("sliderValue_0.2", value);
+            Debug.Log("sliderValue_0.2");
+
+
         }
 
-        text_percentageSlider1.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
+       // text_percentageSlider1.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
         parcentageBoxs[0].text = value.ToString();
-        PlayerPrefs.SetFloat("NoMatch", value);
+       
+       // PlayerPrefs.SetFloat("NoMatch", value);
 
         setSlider(0);
 
@@ -288,10 +317,33 @@ public class GameManager : MonoBehaviour
         {
             text_percentageSlider1.SetActive(false);
         }
+        if (giftItemCount == 3)
+        {
 
-        text_percentageSlider1.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
+            PlayerPrefs.SetFloat("sliderValue_1.0", value);
+            Debug.Log("sliderValue_1.0");
+
+        }
+        else if (giftItemCount == 4)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_1.1", value);
+            Debug.Log("sliderValue_1.1");
+
+
+        }
+        else if (giftItemCount == 5)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_1.2", value);
+            Debug.Log("sliderValue_1.2");
+
+
+        }
+
+       // text_percentageSlider1.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
         parcentageBoxs[1].text = value .ToString();
-        PlayerPrefs.SetFloat("Watch", value);
+      //  PlayerPrefs.SetFloat("Watch", value);
 
 
         setSlider(0);
@@ -307,10 +359,33 @@ public class GameManager : MonoBehaviour
         {
             text_percentageSlider2.SetActive(false);
         }
+        if (giftItemCount == 3)
+        {
 
-        text_percentageSlider2.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
+            PlayerPrefs.SetFloat("sliderValue_2.0", value);
+            Debug.Log("sliderValue_0.0");
+
+        }
+        else if (giftItemCount == 4)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_2.1", value);
+            Debug.Log("sliderValue_0.1");
+
+
+        }
+        else if (giftItemCount == 5)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_2.2", value);
+            Debug.Log("sliderValue_0.2");
+
+
+        }
+
+       // text_percentageSlider2.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
         parcentageBoxs[2].text = value.ToString();
-        PlayerPrefs.SetFloat("Camera", value);
+       // PlayerPrefs.SetFloat("Camera", value);
 
 
 
@@ -326,10 +401,33 @@ public class GameManager : MonoBehaviour
         {
             text_percentageSlider3.SetActive(false);
         }
+        if (giftItemCount == 3)
+        {
 
-        text_percentageSlider3.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
+            PlayerPrefs.SetFloat("sliderValue_3.0", value);
+            Debug.Log("sliderValue_0.0");
+
+        }
+        else if (giftItemCount == 4)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_3.1", value);
+            Debug.Log("sliderValue_0.1");
+
+
+        }
+        else if (giftItemCount == 5)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_3.2", value);
+            Debug.Log("sliderValue_0.2");
+
+
+        }
+
+       // text_percentageSlider3.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
         parcentageBoxs[3].text = value.ToString();
-        PlayerPrefs.SetFloat("Laptop", value);
+       // PlayerPrefs.SetFloat("Laptop", value);
 
 
     }
@@ -344,10 +442,33 @@ public class GameManager : MonoBehaviour
         {
             text_percentageSlider4.SetActive(false);
         }
+        if (giftItemCount == 3)
+        {
 
-        text_percentageSlider4.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
+            PlayerPrefs.SetFloat("sliderValue_4.0", value);
+            Debug.Log("sliderValue_0.0");
+
+        }
+        else if (giftItemCount == 4)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_4.1", value);
+            Debug.Log("sliderValue_0.1");
+
+
+        }
+        else if (giftItemCount == 5)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_4.2", value);
+            Debug.Log("sliderValue_0.2");
+
+
+        }
+
+       // text_percentageSlider4.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
         parcentageBoxs[4].text = value.ToString();
-        PlayerPrefs.SetFloat("Bag", value);
+      //  PlayerPrefs.SetFloat("Bag", value);
 
 
     }
@@ -362,10 +483,33 @@ public class GameManager : MonoBehaviour
         {
             text_percentageSlider5.SetActive(false);
         }
+        if (giftItemCount == 3)
+        {
 
-        text_percentageSlider5.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
+            PlayerPrefs.SetFloat("sliderValue_5.0", value);
+            Debug.Log("sliderValue_0.0");
+
+        }
+        else if (giftItemCount == 4)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_5.1", value);
+            Debug.Log("sliderValue_0.1");
+
+
+        }
+        else if (giftItemCount == 5)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_5.2", value);
+            Debug.Log("sliderValue_0.2");
+
+
+        }
+
+       // text_percentageSlider5.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
         parcentageBoxs[5].text = value.ToString();
-        PlayerPrefs.SetFloat("Mobile", value);
+       // PlayerPrefs.SetFloat("Mobile", value);
 
 
     }
@@ -380,8 +524,31 @@ public class GameManager : MonoBehaviour
         {
             text_percentageSlider6.SetActive(false);
         }
+        if (giftItemCount == 3)
+        {
 
-        text_percentageSlider6.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
+            PlayerPrefs.SetFloat("sliderValue_6.0", value);
+            Debug.Log("sliderValue_0.0");
+
+        }
+        else if (giftItemCount == 4)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_6.1", value);
+            Debug.Log("sliderValue_0.1");
+
+
+        }
+        else if (giftItemCount == 5)
+        {
+
+            PlayerPrefs.SetFloat("sliderValue_6.2", value);
+            Debug.Log("sliderValue_0.2");
+
+
+        }
+
+       // text_percentageSlider6.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";
         parcentageBoxs[6].text = value.ToString();
        
     }
@@ -476,6 +643,7 @@ public class GameManager : MonoBehaviour
         if(value == 1)
         {
             PlayerPrefs.SetInt("gift", 3);
+            giftItemCount = 3;
 
             belowBox[0].SetActive(true);
             belowBox[1].SetActive(false);
@@ -506,6 +674,7 @@ public class GameManager : MonoBehaviour
         else if(value == 2)
         {
             PlayerPrefs.SetInt("gift", 4);
+            giftItemCount = 4;
 
             belowBox[0].SetActive(false);
             belowBox[1].SetActive(true);
@@ -531,6 +700,7 @@ public class GameManager : MonoBehaviour
         else if ( value == 3)
         {
             PlayerPrefs.SetInt("gift", 5);
+            giftItemCount = 5;
 
             belowBox[0].SetActive(false);
             belowBox[1].SetActive(false);

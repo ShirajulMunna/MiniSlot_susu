@@ -8,13 +8,14 @@ public class ParcentageHandler : MonoBehaviour
    
     public Slider[] parcentageSliders;
     private float noMatch, watch, cameraGift, laptop, bag, mobile;
+    public int giftitemCount;
 
-    void Start()
+    void OnEnable()
     {
-      
 
+        giftitemCount = GameManager.Instance.giftItemCount;
         //Parcentages
-        noMatch = PlayerPrefs.GetFloat("NoMatch");
+        // noMatch = PlayerPrefs.GetFloat("NoMatch");
         watch = PlayerPrefs.GetFloat("Watch");
         cameraGift = PlayerPrefs.GetFloat("Camera");
         laptop = PlayerPrefs.GetFloat("Laptop");
@@ -29,39 +30,144 @@ public class ParcentageHandler : MonoBehaviour
         UpdateBagSlider();
         UpdateMobileSlider();
 
-        //End parcentages
+       
 
         
     }
 
     public void UpdateNoMatchSlider() 
     {
-        parcentageSliders[0].value = noMatch;
+       
+
+        if (giftitemCount == 3)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_0.0");
+            parcentageSliders[0].value = getValue;
+
+
+        }
+        else if (giftitemCount == 4)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_0.1");
+            parcentageSliders[0].value = getValue;
+
+        }
+        else if (giftitemCount == 5) 
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_0.2");
+            parcentageSliders[0].value = getValue;
+        }
+      
     
     }
     public void UpdateClockSlider()
     {
-        parcentageSliders[1].value = watch;
+        if (giftitemCount == 3)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_1.0");
+            parcentageSliders[1].value = getValue;
+
+
+        }
+        else if (giftitemCount == 4)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_1.1");
+            parcentageSliders[1].value = getValue;
+
+        }
+        else if (giftitemCount == 5)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_1.2");
+            parcentageSliders[1].value = getValue;
+        }
 
     }
     public void UpdateCameraSlider()
     {
-        parcentageSliders[2].value = cameraGift;
+        if (giftitemCount == 3)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_2.0");
+            parcentageSliders[2].value = getValue;
+
+
+        }
+        else if (giftitemCount == 4)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_2.1");
+            parcentageSliders[2].value = getValue;
+
+        }
+        else if (giftitemCount == 5)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_2.2");
+            parcentageSliders[2].value = getValue;
+        }
 
     }
     public void UpdateLaptopSlider()
     {
-        parcentageSliders[3].value = laptop;
+        if (giftitemCount == 3)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.0");
+            parcentageSliders[3].value = getValue;
+
+
+        }
+        else if (giftitemCount == 4)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.1");
+            parcentageSliders[3].value = getValue;
+
+        }
+        else if (giftitemCount == 5)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_3.2");
+            parcentageSliders[3].value = getValue;
+        }
 
     }
     public void UpdateBagSlider()
     {
-        parcentageSliders[4].value = bag;
+        if (giftitemCount == 3)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.0");
+            parcentageSliders[4].value = 0;
+
+
+        }
+        else if (giftitemCount == 4)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.1");
+            parcentageSliders[4].value = getValue;
+
+        }
+        else if (giftitemCount == 5)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_4.2");
+            parcentageSliders[4].value = 0;
+        }
 
     }
     public void UpdateMobileSlider()
     {
-        parcentageSliders[5].value = mobile;
+        if (giftitemCount == 3)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.0");
+            parcentageSliders[5].value = 0;
+
+
+        }
+        else if (giftitemCount == 4)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.1");
+            parcentageSliders[5].value = 0;
+
+        }
+        else if (giftitemCount == 5)
+        {
+            float getValue = PlayerPrefs.GetFloat("sliderValue_5.2");
+            parcentageSliders[5].value = getValue;
+        }
 
     }
    
