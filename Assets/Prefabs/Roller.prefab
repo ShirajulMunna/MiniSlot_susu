@@ -57,7 +57,7 @@ MonoBehaviour:
   - 0
   _items: []
   increasedSpeed: 1
-  spinTime: 5
+  spinTime: 6
   speedY: 1
   startDecrese: 0
   totalSpeed: 0

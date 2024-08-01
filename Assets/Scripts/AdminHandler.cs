@@ -6,22 +6,39 @@ using UnityEngine.UI;
 
 public class AdminHandler : MonoBehaviour
 {
+    public static AdminHandler Instance;
     public Slider[] adminSliders;
     private int rotationSpeed, rotationTime, gift, particles;
 
     void Start()
     {
-     
-        rotationSpeed = PlayerPrefs.GetInt("rotationSpeed",400);
-       
-        rotationTime = PlayerPrefs.GetInt("rotationTime",5);
-        gift = PlayerPrefs.GetInt("gift",3);
-        particles = PlayerPrefs.GetInt("particles",1);
-        
-        UpdateSpeedSlider();
-        UpdateTimeSlider();
-        UpdateGiftSlider();
-        UpdateParticlesSlider();
+        Instance = this;
+
+        if (GameManager.Instance.quitValue == 50)
+        {
+            adminSliders[0].value = 1;
+            adminSliders[1].value = 1;
+            adminSliders[2].value = 1;
+            adminSliders[3].value = 1;
+
+        }
+        else 
+        {
+            rotationSpeed = PlayerPrefs.GetInt("rotationSpeed", 500);
+            rotationTime = PlayerPrefs.GetInt("rotationTime", 6);
+            gift = PlayerPrefs.GetInt("gift", 3);
+            particles = PlayerPrefs.GetInt("particles", 1);
+
+            UpdateSpeedSlider();
+            UpdateTimeSlider();
+            UpdateGiftSlider();
+            UpdateParticlesSlider();
+
+
+        }
+
+
+
 
         GameManager.Instance.sliderValue[0] = PlayerPrefs.GetFloat("NoMatch", 99);
         GameManager.Instance.sliderValue[1] = PlayerPrefs.GetFloat("Watch", 0);
@@ -29,6 +46,8 @@ public class AdminHandler : MonoBehaviour
         GameManager.Instance.sliderValue[3] = PlayerPrefs.GetFloat("Laptop", 0);
         GameManager.Instance.sliderValue[4] = PlayerPrefs.GetFloat("Bag", 0);
         GameManager.Instance.sliderValue[5] = PlayerPrefs.GetFloat("Mobile", 0);
+
+       
 
 
 
@@ -39,12 +58,12 @@ public class AdminHandler : MonoBehaviour
     #region
     public void UpdateSpeedSlider()
     {
-        if (rotationSpeed == 400)
+        if (rotationSpeed == 500)
         {
             adminSliders[0].value = 1;
 
         }
-        else if (rotationSpeed == 500)
+        else if (rotationSpeed == 550)
         {
             adminSliders[0].value = 2;
 
@@ -59,12 +78,12 @@ public class AdminHandler : MonoBehaviour
     }
     public void UpdateTimeSlider()
     {
-        if (rotationTime == 5)
+        if (rotationTime == 6)
         {
             adminSliders[1].value = 1;
 
         }
-        else if (rotationTime == 7)
+        else if (rotationTime == 8)
         {
             adminSliders[1].value = 2;
 

@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
     public int rotationSpeed_2;
     public int rotationSpeed_3;
 
+    public int quitValue;
+
     private void Awake()
     {
         Instance = this;
@@ -58,8 +60,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        quitValue = PlayerPrefs.GetInt("Quit");
+
+      
+
         moveSpeed = rotationSpeed_1;
         AudioSource = GetComponent<AudioSource>();
+
+        
    
     }
 
@@ -74,6 +82,7 @@ public class GameManager : MonoBehaviour
     public int itemCount;
     public int[] percentValues;
     public int sum=0;
+   
 
 
 
@@ -422,26 +431,26 @@ public class GameManager : MonoBehaviour
     {   
         if(value == 1)
         {
-            PlayerPrefs.SetInt("rotationTime", 5);
-            RollerManager.Instance._rollers[0].GetComponent<Roller>().spinTime=5; 
-            RollerManager.Instance._rollers[1].GetComponent<Roller>().spinTime = 5;
-            RollerManager.Instance._rollers[2].GetComponent<Roller>().spinTime = 5;
+            PlayerPrefs.SetInt("rotationTime", 6);
+            RollerManager.Instance._rollers[0].GetComponent<Roller>().spinTime=6; 
+            RollerManager.Instance._rollers[1].GetComponent<Roller>().spinTime = 6;
+            RollerManager.Instance._rollers[2].GetComponent<Roller>().spinTime = 6;
 
         }
         else if (value == 2)
         {
 
             PlayerPrefs.SetInt("rotationTime", 7);
-            RollerManager.Instance._rollers[0].GetComponent<Roller>().spinTime = 7;
-            RollerManager.Instance._rollers[1].GetComponent<Roller>().spinTime = 7;
-            RollerManager.Instance._rollers[2].GetComponent<Roller>().spinTime = 7;
+            RollerManager.Instance._rollers[0].GetComponent<Roller>().spinTime = 8;
+            RollerManager.Instance._rollers[1].GetComponent<Roller>().spinTime = 8;
+            RollerManager.Instance._rollers[2].GetComponent<Roller>().spinTime = 8;
 
         }
         else
         {
             PlayerPrefs.SetInt("rotationTime", 10);
 
-           // Roller.instance.spinTime = 10;
+           
             RollerManager.Instance._rollers[0].GetComponent<Roller>().spinTime = 10;
             RollerManager.Instance._rollers[1].GetComponent<Roller>().spinTime = 10;
             RollerManager.Instance._rollers[2].GetComponent<Roller>().spinTime = 10;
@@ -543,7 +552,7 @@ public class GameManager : MonoBehaviour
             GameObject slider4Handle = sliders[5].transform.GetChild(4).gameObject.transform.GetChild(0).gameObject;
             slider4Handle.SetActive(true);
             
-            //resetHandler();
+           
         }
         RollerManager.Instance.ItemChange((int)value);
         itemCount = (int)value+2;
@@ -557,7 +566,7 @@ public class GameManager : MonoBehaviour
         {
             text_RollingItemSlider.SetActive(false);
         }
-        /*text_percentageSlider6.GetComponent<TextMeshProUGUI>().text = (int)(value + 0.5f) + "%";*/
+        
     }
 
     #endregion
@@ -633,6 +642,12 @@ public class GameManager : MonoBehaviour
     {
 
         return itemCount;
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
+       // PlayerPrefs.SetInt("Quit", 50);
     }
 
 

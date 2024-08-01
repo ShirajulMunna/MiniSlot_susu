@@ -85,7 +85,7 @@ namespace JGM.Game.Rollers
             bool isSpeedIncreased= Roller.instance.increasedSpeed;
             int timer= Roller.instance.spinTime;
             Debug.Log("rollername " + _roller.name);
-            if (timer == 5)
+            if (timer == 6)
             {
                 _moveSpeed = GameManager.Instance.moveSpeed;
                 Debug.Log("update Move " + _moveSpeed);
@@ -170,7 +170,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 4.0f && itemTime_1 <= 4.50f)
+                else if (itemTime_1 > 4.0f && itemTime_1 <= 5.00f)
                 {
               
 
@@ -179,7 +179,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 4.50f && itemTime_1 <= 5.00f)
+                else if (itemTime_1 > 5.00f && itemTime_1 <= 6.00f)
                 {
              
 
@@ -192,7 +192,7 @@ namespace JGM.Game.Rollers
 
 
             }
-            else if (timer == 7)
+            else if (timer == 8)
             {
 
                 _moveSpeed = GameManager.Instance.moveSpeed;
@@ -314,7 +314,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 6.00f && itemTime_1 <= 6.50f)
+                else if (itemTime_1 > 6.00f && itemTime_1 <= 7.0f)
                 {
                   
 
@@ -323,7 +323,7 @@ namespace JGM.Game.Rollers
 
 
                 }
-                else if (itemTime_1 > 6.50f && itemTime_1 <= 7.00f)
+                else if (itemTime_1 > 7.0f && itemTime_1 <= 8.00f)
                 {
                   
 

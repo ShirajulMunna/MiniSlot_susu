@@ -58,7 +58,7 @@ namespace JGM.Game.Rollers
         private void Start()
         {
             _itemSpinSpeed = PlayerPrefs.GetInt("rotationSpeed");
-            spinTime= PlayerPrefs.GetInt("rotationTime", 5);
+            spinTime= PlayerPrefs.GetInt("rotationTime", 6);
         }
 
 
