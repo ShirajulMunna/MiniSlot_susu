@@ -764,12 +764,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void resetHandler(){
-        for(int i=0;i<6;i++){
+        for(int i=0;i<6;i++)
+        {
             Debug.Log("before reset  "+ sliders[i].value);
             sliderValue[i] = 0;
             sliders[i].value = 0;
         }
         float[] s = getSliderValue();
+        PlayerPrefs.DeleteAll();
         
     }
 
