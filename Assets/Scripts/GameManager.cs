@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     public int[] percentValues;
     public int sum = 0;
     public int giftItemCount;
+    public GameObject[] sliderImages;
 
 
     private void Awake()
@@ -642,6 +643,7 @@ public class GameManager : MonoBehaviour
    
         if(value == 1)
         {
+            
             PlayerPrefs.SetInt("gift", 3);
             giftItemCount = 3;
 
@@ -651,7 +653,11 @@ public class GameManager : MonoBehaviour
             sliders[4].gameObject.SetActive(false);
             sliders[5].gameObject.SetActive(false);
 
-            GameObject slider3Circle = sliders[4].transform.GetChild(3).gameObject;
+            for(int i = 0; i < sliderImages.Length; i++)
+            {
+                sliderImages[i].SetActive(false);
+            }
+           /* GameObject slider3Circle = sliders[4].transform.GetChild(3).gameObject;
             slider3Circle.GetComponent<Image>().enabled = false;
             GameObject slider3Fill = sliders[4].transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             slider3Fill.GetComponent<Image>().enabled = false;
@@ -663,7 +669,7 @@ public class GameManager : MonoBehaviour
             GameObject slider4Fill = sliders[5].transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             slider4Fill.GetComponent<Image>().enabled = false;
             GameObject slider4Handle = sliders[5].transform.GetChild(4).gameObject.transform.GetChild(0).gameObject;
-            slider4Handle.SetActive(false);
+            slider4Handle.SetActive(false);*/
             //resetHandler();
             sliders[4].value = 0;
             sliders[5].value = 0;
@@ -682,7 +688,12 @@ public class GameManager : MonoBehaviour
             sliders[4].gameObject.SetActive(true);
             sliders[5].gameObject.SetActive(false);
 
-            GameObject slider3Circle = sliders[4].transform.GetChild(3).gameObject;
+            sliderImages[0].SetActive(true);
+            sliderImages[1].SetActive(true);
+            sliderImages[2].SetActive(false);
+            sliderImages[3].SetActive(false);
+
+            /*GameObject slider3Circle = sliders[4].transform.GetChild(3).gameObject;
             slider3Circle.GetComponent<Image>().enabled = true;
             GameObject slider3Fill = sliders[4].transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             slider3Fill.GetComponent<Image>().enabled = true;
@@ -694,7 +705,7 @@ public class GameManager : MonoBehaviour
             GameObject slider4Fill = sliders[5].transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             slider4Fill.GetComponent<Image>().enabled = false;
             GameObject slider4Handle = sliders[5].transform.GetChild(4).gameObject.transform.GetChild(0).gameObject;
-            slider4Handle.SetActive(false);
+            slider4Handle.SetActive(false);*/
             sliders[5].value = 0;
         }
         else if ( value == 3)
@@ -708,7 +719,12 @@ public class GameManager : MonoBehaviour
             sliders[4].gameObject.SetActive(true);
             sliders[5].gameObject.SetActive(true);
 
-            GameObject slider3Circle = sliders[4].transform.GetChild(3).gameObject;
+            for (int i = 0; i < sliderImages.Length; i++)
+            {
+                sliderImages[i].SetActive(true);
+            }
+
+            /*GameObject slider3Circle = sliders[4].transform.GetChild(3).gameObject;
             slider3Circle.GetComponent<Image>().enabled = true;
             GameObject slider3Fill = sliders[4].transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             slider3Fill.GetComponent<Image>().enabled = true;
@@ -720,9 +736,10 @@ public class GameManager : MonoBehaviour
             GameObject slider4Fill = sliders[5].transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             slider4Fill.GetComponent<Image>().enabled = true;
             GameObject slider4Handle = sliders[5].transform.GetChild(4).gameObject.transform.GetChild(0).gameObject;
-            slider4Handle.SetActive(true);
-            
-           
+            slider4Handle.SetActive(true);*/
+
+
+
         }
         RollerManager.Instance.ItemChange((int)value);
         itemCount = (int)value+2;
